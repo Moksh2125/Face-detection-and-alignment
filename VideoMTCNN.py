@@ -7,6 +7,9 @@ cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
 
+    if not ret:
+        break
+
     faces = detector.detect_faces(frame)
 
     for face in faces:
@@ -30,4 +33,5 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('x'):
         break
 
+cap.release()
 cv2.destroyAllWindows()
