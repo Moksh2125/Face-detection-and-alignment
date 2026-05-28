@@ -4,7 +4,7 @@ import math
 
 detector = MTCNN()
 
-img = cv2.imread('Amitabh Bachchan_20.jpg')
+img = cv2.imread('images/Amitabh Bachchan_20.jpg')
 
 faces = detector.detect_faces(img)
 
